@@ -1,0 +1,60 @@
+# Raspberry Pi 5 Low Power Template config.txt
+# Copy this to /boot/config.txt and reboot
+# Reference: https://www.raspberrypi.com/documentation/computers/config_txt.html
+
+# Disable WiFi and Bluetooth
+dtoverlay=disable-wifi
+dtoverlay=disable-bt
+
+# Disable onboard audio
+dtparam=audio=off
+
+# Turn off mainboard LEDs
+dtparam=act_led_trigger=none
+dtparam=act_led_activelow=off
+dtparam=pwr_led_trigger=none
+dtparam=pwr_led_activelow=off
+
+# Turn off Ethernet port LEDs
+dtparam=eth_led0=4
+dtparam=eth_led1=4
+
+
+# Reduce GPU memory allocation
+gpu_mem=16
+
+# Set GPU frequency (minimum supported for Pi 5 is 500MHz)
+gpu_freq=500
+gpu_freq_min=500
+
+# Lower CPU frequency (minimum supported for Pi 5 is 1500MHz)
+arm_freq=1500
+arm_freq_min=1500
+
+# Lower core frequency (minimum supported for Pi 5 is 500MHz)
+core_freq_min=500
+
+# Undervolting (recommended for Pi 5, minimum supported is -10000)
+over_voltage_delta=-10000
+
+# Disable HDMI firmware KMS setup (Pi 5)
+disable_fw_kms_setup=1
+
+# Boot in 64-bit mode (default for Pi 5)
+arm_64bit=1
+
+# Optional: Limit RAM usage (for minimal setups)
+total_mem=512
+
+# Turn off Ethernet (if not needed)
+# There is no official overlay, but you can disable the interface in the OS:
+# Add to /etc/rc.local or use a script:
+# ifconfig eth0 down
+
+# For advanced users: uncomment to further tweak
+# max_framebuffers=0
+# v3d_freq_min=250
+# h264_freq_min=250
+# isp_freq_min=250
+
+# Always reboot after changing config.txt
