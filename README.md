@@ -104,4 +104,12 @@ See `config.txt.template` for a ready-to-use configuration file.
 
 ## 6. References
 
+- [Official Raspberry Pi config.txt documentation](https://www.raspberrypi.com/documentation/computers/config_txt.html)
+- [Raspberry Pi Forums: Pi 5 Power Consumption](https://forums.raspberrypi.com/viewtopic.php?t=357661)
+- [Raspberry Pi Forums: Pi 5 Power Saving Tips](https://forums.raspberrypi.com/viewtopic.php?t=357661#p2143127)
+- [Jeff Geerling: Raspberry Pi 5 Power Consumption](https://www.jeffgeerling.com/blog/2023/raspberry-pi-5-power-consumption)
+- [Raspberry Pi Documentation: Overclocking and Overvolting](https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#overclocking-and-overvolting)
+- [Raspberry Pi Documentation: GPU Memory](https://www.raspberrypi.com/documentation/computers/config_txt.html#gpu_mem)
+- [Raspberry Pi Documentation: HDMI Options](https://www.raspberrypi.com/documentation/computers/config_txt.html#hdmi-options)
+
 **Note:** Always reboot after changing `config.txt`. Some settings may require firmware updates for full effect.
